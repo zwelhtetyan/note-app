@@ -110,4 +110,7 @@ button {
     .gutter {
         width: 2px !important;
     }
+    .delete-icon {
+        right: 5px;
+    }
 }
