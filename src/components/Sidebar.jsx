@@ -12,9 +12,9 @@ const Sidebar = (props) => {
                 }`}
                 onClick={() => props.handleSelect(note.id)}
             >
-                <h5 className='mb-0 note-summary'>
+                <marquee className='mb-0 note-summary'>
                     {note.text ? note.text.split('\n')[0] : `note ${index + 1}`}
-                </h5>
+                </marquee>
                 <FontAwesomeIcon
                     icon={faTrashCan}
                     className='delete-icon'
