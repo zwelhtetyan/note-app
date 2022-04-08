@@ -82,6 +82,8 @@ button {
 .noteItem {
     padding: 10px;
     position: relative;
+    overflow: hidden;
+    white-space: nowrap;
 }
 .noteItem.selected {
     background-color: #2c4e8d;

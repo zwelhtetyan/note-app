@@ -9,11 +9,17 @@ const App = () => {
         () => JSON.parse(localStorage.getItem('notes')) || []
     );
 
-    const [currentNoteID, setCurrentNoteID] = React.useState('');
+    const [currentNoteID, setCurrentNoteID] = React.useState(
+        () => localStorage.getItem('currentNoteID') || ''
+    );
 
     React.useEffect(() => {
         localStorage.setItem('notes', JSON.stringify(notes));
     }, [notes]);
+
+    React.useEffect(() => {
+        localStorage.setItem('currentNoteID', currentNoteID);
+    }, [currentNoteID]);
 
     const createNewNote = () => {
         const newNote = {
